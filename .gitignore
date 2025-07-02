@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+venv/
+env/
+.venv/
+.env
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dylib
+
+# macOS
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Other
+temp/
+tmp/

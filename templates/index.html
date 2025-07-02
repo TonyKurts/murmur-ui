@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MurmurUI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+  </head>
+
+  <body>
+    <main>
+      <h1>MurmurUI</h1>
+
+      <div id="notification" class="hidden"></div>
+
+      <form id="form-container" class="hidden">
+        <div class="form-group">
+          <label for="language">Language:</label>
+          <select id="language" name="language">
+            <option value="ru">Russian</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="audio-file">Upload audio or video file:</label>
+          <input id="audio-file" type="file" name="file"accept="audio/*,video/*" required>
+        </div>
+
+        <button type="submit">Transcribe</button>
+      </form>
+
+      <div id="loader" class="hidden">
+        <div class="loader-text"></div>
+        <div class="spinner"></div>
+      </div>
+
+      <div id="result-container" class="hidden">
+        <div class="result-actions">
+            <button id="reset-btn">Reset</button>
+            <button id="copy-btn">Copy</button>
+            <button id="download-btn">Download .txt</button>
+        </div>
+        <pre id="result-text"></pre>
+      </div>
+    </main>
+
+    <script src="{{ url_for('static', path='js/app.js') }}" type="module"></script>
+  </body>
+</html>

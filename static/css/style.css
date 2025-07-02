@@ -1,0 +1,130 @@
+:root {
+    --bg: #f9f9f9;
+    --text: #333;
+    --accent: #4f46e5;
+    --accent-light: #a5b4fc;
+    --border: #ddd;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-width: 320px;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+select,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background-color: var(--bg);
+}
+
+button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: var(--accent-light);
+    cursor: not-allowed;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+#notification {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#notification.error {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+#notification.success {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+#loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--accent-light);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+pre {
+    white-space: pre-wrap;
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+.result-actions {
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.5rem;
+}
